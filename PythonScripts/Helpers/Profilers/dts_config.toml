@@ -1,0 +1,102 @@
+
+[[dts_list]]
+name = "dts_0"
+named_node = "gfxcard0.tiles.taps.pvc_dts0"
+type = "intel"
+
+[[dts_list]]
+name = "compute_00"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_00"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_10"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_10"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_20"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_20"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_30"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_30"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_40"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_40"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_50"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_50"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_60"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_60"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "compute_70"
+named_node = "gfxcard0.tiles.taps.pvc_dts_compute_70"
+type = "intelpvc_xt_b0"
+
+[[dts_list]]
+name = "hbm_0"
+named_node = "gfxcard0.tiles.taps.pvc_dts_ats_hbmss_ns00"
+type = "intel"
+
+[[dts_list]]
+name = "hbm_1"
+named_node = "gfxcard0.tiles.taps.pvc_dts_ats_hbmss_ns10"
+type = "intel"
+
+[[dts_list]]
+name = "hbm_2"
+named_node = "gfxcard0.tiles.taps.pvc_dts_ats_hbmss_ns20"
+type = "intel"
+
+[[dts_list]]
+name = "hbm_3"
+named_node = "gfxcard0.tiles.taps.pvc_dts_ats_hbmss_ns30"
+type = "intel"
+
+[[dts_list]]
+name = "slice_0"
+named_node = "gfxcard0.tiles.taps.pvc_dts_slice00"
+type = "intel"
+
+[[dts_list]]
+name = "slice_1"
+named_node = "gfxcard0.tiles.taps.pvc_dts_slice10"
+type = "intel"
+
+[[dts_list]]
+name = "slice_2"
+named_node = "gfxcard0.tiles.taps.pvc_dts_slice20"
+type = "intel"
+
+[[dts_list]]
+name = "slice_3"
+named_node = "gfxcard0.tiles.taps.pvc_dts_slice30"
+type = "intel"
+
+[[dts_list]]
+name = "mdfi_ew"
+named_node = "gfxcard0.tiles.taps.pvc_dts_mdfiss_ew0"
+type = "intel"
+
+[[dts_list]]
+name = "mdfi_ns"
+named_node = "gfxcard0.tiles.taps.pvc_dts_mdfiss_ns_t2c0"
+type = "intel"
+
+[[dts_list]]
+name = "anr"
+named_node = "gfxcard0.anr.tiles.pvt_6ts_15pd_2vm"
+type = "MR74137_v2r3"
+
+
