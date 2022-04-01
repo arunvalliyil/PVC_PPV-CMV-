@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IntecSystem>
+  <Device DeviceNumber="0" SiteNumber="1">
+    <TempInputControl>
+      <Diode Equation="Avg" Name="Diode">
+        <Sensors>
+          <Sensor Index="0" Enabled="true" />
+          <Sensor Index="1" Enabled="true" />
+          <Sensor Index="2" Enabled="false" />
+          <Sensor Index="3" Enabled="false" />
+        </Sensors>
+      </Diode>
+      <PECI Equation="Avg" Name="PECI">
+        <Sensors>
+          <Sensor Index="0" Enabled="true" />
+          <Sensor Index="1" Enabled="false" />
+          <Sensor Index="2" Enabled="false" />
+          <Sensor Index="3" Enabled="false" />
+          <Sensor Index="4" Enabled="false" />
+          <Sensor Index="5" Enabled="false" />
+          <Sensor Index="6" Enabled="false" />
+          <Sensor Index="7" Enabled="false" />
+          <Sensor Index="8" Enabled="false" />
+          <Sensor Index="9" Enabled="false" />
+          <Sensor Index="10" Enabled="false" />
+          <Sensor Index="11" Enabled="false" />
+          <Sensor Index="12" Enabled="false" />
+          <Sensor Index="13" Enabled="false" />
+          <Sensor Index="14" Enabled="false" />
+          <Sensor Index="15" Enabled="false" />
+        </Sensors>
+      </PECI>
+      <PF Equation="Avg" Name="PF">
+        <Sensors>
+          <Sensor Index="0" Enabled="true" />
+          <Sensor Index="1" Enabled="false" />
+          <Sensor Index="2" Enabled="false" />
+          <Sensor Index="3" Enabled="false" />
+        </Sensors>
+      </PF>
+    </TempInputControl>
+    <PECI_ADVANCED Enabled="true" EnMasterMode="1" EnOnBoardVtt="0" EnAutoTjMax="1" FrequencyIndex="10" CmdsDelayUs="400" LoopsDelayMs="1" ManualTjMax="100" />
+    <PF_PARAMS>
+      <Channels>
+        <Channel Index="0" Slope="0.2" Intercept="0" />
+        <Channel Index="1" Slope="0.2" Intercept="0" />
+        <Channel Index="2" Slope="0.2" Intercept="0" />
+        <Channel Index="3" Slope="0.2" Intercept="0" />
+      </Channels>
+    </PF_PARAMS>
+    <TDAU Enabled="false" fileName="" FullPath="true" />
+    <PECI Enabled="false" fileName="" FullPath="true" />
+    <Cards>
+      <Card CardId="0" TecMode="Normal">
+        <RampRate Enable="false" EnableFull="false" DesRampRate="30" SpMargin="7" />
+        <PID Proportional="15000" Integral="6000" Derivative="0" />
+        <TEC Enabled="false" />
+        <GANG AutoCfgEnabled="true" />
+        <Vmax Voltage="18" />
+        <VmaxHeatTec Voltage="18" />
+        <Events Enabled="false" fileName="" FullPath="true" />
+        <Case Equation="Avg" Name="Case" RTDType="RTD_PT1000_00375_HEL705">
+          <Sensors>
+            <Sensor Index="0" Enabled="true" />
+            <Sensor Index="1" Enabled="false" />
+            <Sensor Index="2" Enabled="false" />
+          </Sensors>
+        </Case>
+        <TempFeedbackControl>
+          <FeedbackConfiguration Mode="Normal" Type="Case" Equation="Avg">
+            <Feedback>
+              <Sensors>
+                <Sensor Index="0" Enabled="true" />
+                <Sensor Index="1" Enabled="false" />
+                <Sensor Index="2" Enabled="false" />
+                <Sensor Index="3" Enabled="false" />
+                <Sensor Index="4" Enabled="false" />
+                <Sensor Index="5" Enabled="false" />
+                <Sensor Index="6" Enabled="false" />
+                <Sensor Index="7" Enabled="false" />
+                <Sensor Index="8" Enabled="false" />
+                <Sensor Index="9" Enabled="false" />
+                <Sensor Index="10" Enabled="false" />
+                <Sensor Index="11" Enabled="false" />
+                <Sensor Index="12" Enabled="false" />
+                <Sensor Index="13" Enabled="false" />
+                <Sensor Index="14" Enabled="false" />
+                <Sensor Index="15" Enabled="false" />
+              </Sensors>
+            </Feedback>
+          </FeedbackConfiguration>
+          <FallBackConfiguration Type="Case" Equation="Avg" SensorsSelection="1">
+            <CaseWithOffset Timeout="16" ManualOffsetValue="64.1" ManualOffsetEnable="false" />
+          </FallBackConfiguration>
+        </TempFeedbackControl>
+      </Card>
+    </Cards>
+  </Device>
+</IntecSystem>

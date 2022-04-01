@@ -1,0 +1,939 @@
+<ProductDefinition xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://Intel.Mpv.Fusion">
+  <BootStagePaths z:Id="2" z:Size="14">
+    <BootStagePathDescriptorLite z:Id="3">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="4" z:Size="1">
+        <d4p1:string z:Id="5">PowerOffStage/FivrBreak</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="6">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="7" z:Size="2">
+        <d4p1:string z:Id="8">PowerOffStage/FivrBreak</d4p1:string>
+        <d4p1:string z:Id="9">FivrBreak/FuseBreak</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="10">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="11" z:Size="3">
+        <d4p1:string z:Id="12">PowerOffStage/FivrBreak</d4p1:string>
+        <d4p1:string z:Id="13">FivrBreak/FuseBreak</d4p1:string>
+        <d4p1:string z:Id="14">FuseBreak/EfiStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="15">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="16" z:Size="4">
+        <d4p1:string z:Id="17">PowerOffStage/FivrBreak</d4p1:string>
+        <d4p1:string z:Id="18">FivrBreak/FuseBreak</d4p1:string>
+        <d4p1:string z:Id="19">FuseBreak/EfiStage</d4p1:string>
+        <d4p1:string z:Id="20">EfiStage/SUSEStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="21">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="22" z:Size="4">
+        <d4p1:string z:Id="23">PowerOffStage/FivrBreak</d4p1:string>
+        <d4p1:string z:Id="24">FivrBreak/FuseBreak</d4p1:string>
+        <d4p1:string z:Id="25">FuseBreak/EfiStage</d4p1:string>
+        <d4p1:string z:Id="26">EfiStage/UbuntuStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="27">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="28" z:Size="1">
+        <d4p1:string z:Id="29">EfiStage/SUSEStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="30">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="31" z:Size="1">
+        <d4p1:string z:Id="32">EfiStage/UbuntuStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="33">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="34" z:Size="1">
+        <d4p1:string z:Id="35">FivrBreak/FuseBreak</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="36">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="37" z:Size="2">
+        <d4p1:string z:Id="38">FivrBreak/FuseBreak</d4p1:string>
+        <d4p1:string z:Id="39">FuseBreak/EfiStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="40">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="41" z:Size="3">
+        <d4p1:string z:Id="42">FivrBreak/FuseBreak</d4p1:string>
+        <d4p1:string z:Id="43">FuseBreak/EfiStage</d4p1:string>
+        <d4p1:string z:Id="44">EfiStage/SUSEStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="45">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="46" z:Size="3">
+        <d4p1:string z:Id="47">FivrBreak/FuseBreak</d4p1:string>
+        <d4p1:string z:Id="48">FuseBreak/EfiStage</d4p1:string>
+        <d4p1:string z:Id="49">EfiStage/UbuntuStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="50">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="51" z:Size="1">
+        <d4p1:string z:Id="52">FuseBreak/EfiStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="53">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="54" z:Size="2">
+        <d4p1:string z:Id="55">FuseBreak/EfiStage</d4p1:string>
+        <d4p1:string z:Id="56">EfiStage/SUSEStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+    <BootStagePathDescriptorLite z:Id="57">
+      <Enabled>true</Enabled>
+      <Priority>1</Priority>
+      <TransitionPathKeys xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="58" z:Size="2">
+        <d4p1:string z:Id="59">FuseBreak/EfiStage</d4p1:string>
+        <d4p1:string z:Id="60">EfiStage/UbuntuStage</d4p1:string>
+      </TransitionPathKeys>
+    </BootStagePathDescriptorLite>
+  </BootStagePaths>
+  <BootStageTransitions z:Size="5">
+    <BootStageTransitionDescriptor z:Id="61" i:type="PythonBasedBootStageTransitionDescriptor">
+      <FromStage z:Id="62">PowerOffStage</FromStage>
+      <StageTimeout>PT3M</StageTimeout>
+      <TargetStateChange>PowerCycle</TargetStateChange>
+      <ToStage z:Id="63">FivrBreak</ToStage>
+      <PostTransitionActions z:Size="0" />
+      <PreTransitionActions z:Size="0" />
+    </BootStageTransitionDescriptor>
+    <BootStageTransitionDescriptor z:Id="64" i:type="PythonBasedBootStageTransitionDescriptor">
+      <FromStage z:Ref="63" i:nil="true" />
+      <StageTimeout>PT3M</StageTimeout>
+      <TargetStateChange>None</TargetStateChange>
+      <ToStage z:Id="65">FuseBreak</ToStage>
+      <PostTransitionActions z:Size="0" />
+      <PreTransitionActions z:Size="0" />
+    </BootStageTransitionDescriptor>
+    <BootStageTransitionDescriptor z:Id="66" i:type="PythonBasedBootStageTransitionDescriptor">
+      <FromStage z:Ref="65" i:nil="true" />
+      <StageTimeout>PT10M</StageTimeout>
+      <TargetStateChange>None</TargetStateChange>
+      <ToStage z:Id="67">EfiStage</ToStage>
+      <PostTransitionActions z:Size="0" />
+      <PreTransitionActions z:Size="1">
+        <ActionOnBootStageTransition z:Id="68" i:type="SerialPortControlOnTransition">
+          <SerialPortControl>TurnOn</SerialPortControl>
+          <SerialPortNumber>7</SerialPortNumber>
+        </ActionOnBootStageTransition>
+      </PreTransitionActions>
+    </BootStageTransitionDescriptor>
+    <BootStageTransitionDescriptor z:Id="69" i:type="MarionetteBootStageTransitionDescriptor">
+      <FromStage z:Ref="67" i:nil="true" />
+      <StageTimeout>PT5M</StageTimeout>
+      <TargetStateChange>None</TargetStateChange>
+      <ToStage z:Id="70">SUSEStage</ToStage>
+      <PostTransitionActions z:Size="1">
+        <ActionOnBootStageTransition z:Id="71" i:type="SerialPortControlOnTransition">
+          <SerialPortControl>TurnOff</SerialPortControl>
+          <SerialPortNumber>7</SerialPortNumber>
+        </ActionOnBootStageTransition>
+      </PostTransitionActions>
+      <PreTransitionActions z:Size="0" />
+      <TransitionCommand z:Id="72">fs1:\bootsuselinux.nsh</TransitionCommand>
+      <MaxCommandRetryCount>0</MaxCommandRetryCount>
+    </BootStageTransitionDescriptor>
+    <BootStageTransitionDescriptor z:Id="73" i:type="MarionetteBootStageTransitionDescriptor">
+      <FromStage z:Ref="67" i:nil="true" />
+      <StageTimeout>PT5M</StageTimeout>
+      <TargetStateChange>None</TargetStateChange>
+      <ToStage z:Id="74">UbuntuStage</ToStage>
+      <PostTransitionActions z:Size="1">
+        <ActionOnBootStageTransition z:Id="75" i:type="SerialPortControlOnTransition">
+          <SerialPortControl>TurnOff</SerialPortControl>
+          <SerialPortNumber>7</SerialPortNumber>
+        </ActionOnBootStageTransition>
+      </PostTransitionActions>
+      <PreTransitionActions z:Size="0" />
+      <TransitionCommand z:Id="76">fs1:\bootlinux.nsh</TransitionCommand>
+      <MaxCommandRetryCount>0</MaxCommandRetryCount>
+    </BootStageTransitionDescriptor>
+  </BootStageTransitions>
+  <BootStages z:Size="6">
+    <BootStage z:Id="77" i:type="PowerOffStage">
+      <StageName z:Ref="62" i:nil="true" />
+      <BinTemplate i:nil="true" />
+      <BinCategory>NONE</BinCategory>
+    </BootStage>
+    <BootStage z:Id="78" i:type="EfiStage">
+      <StageName z:Ref="67" i:nil="true" />
+      <BinTemplate i:nil="true" />
+      <BinCategory>NONE</BinCategory>
+      <MarionetteTransport z:Id="79" i:type="SerialPortMarionetteTransport">
+        <ComPortNumber>7</ComPortNumber>
+      </MarionetteTransport>
+      <OsName z:Id="80">EFI</OsName>
+    </BootStage>
+    <BootStage z:Id="81" i:type="LinuxStage">
+      <StageName z:Ref="74" i:nil="true" />
+      <BinTemplate i:nil="true" />
+      <BinCategory>NONE</BinCategory>
+      <MarionetteTransport z:Id="82" i:type="EthernetRcfMarionetteTransport" />
+      <OsName z:Id="83">LINUX</OsName>
+    </BootStage>
+    <BootStage z:Id="84" i:type="BreakStage">
+      <StageName z:Ref="63" i:nil="true" />
+      <BinTemplate i:nil="true" />
+      <BinCategory>BREAK1</BinCategory>
+    </BootStage>
+    <BootStage z:Id="85" i:type="BreakStage">
+      <StageName z:Ref="65" i:nil="true" />
+      <BinTemplate i:nil="true" />
+      <BinCategory>BREAK2</BinCategory>
+    </BootStage>
+    <BootStage z:Id="86" i:type="LinuxStage">
+      <StageName z:Ref="70" i:nil="true" />
+      <BinTemplate i:nil="true" />
+      <BinCategory>LINUX2</BinCategory>
+      <MarionetteTransport z:Id="87" i:type="EthernetRcfMarionetteTransport" />
+      <OsName z:Id="88">SUSE</OsName>
+    </BootStage>
+  </BootStages>
+  <EnvironmentConfigurations z:Size="1">
+    <EnvironmentConfiguration z:Id="89">
+      <ComponentConfigurations z:Size="7">
+        <EnvironmentComponentConfiguration z:Id="90" i:type="PythonBasedCellPowerControlConfiguration" />
+        <EnvironmentComponentConfiguration z:Id="91" i:type="MinimumFast1ControlSystemConfiguration" />
+        <EnvironmentComponentConfiguration z:Id="92" i:type="OpenIPCXDPConfiguration" />
+        <EnvironmentComponentConfiguration z:Id="93" i:type="PythonConsoleConfiguration">
+          <PythonImportTimeOut>PT1M</PythonImportTimeOut>
+          <PythonInitializationTimeOut>PT1M</PythonInitializationTimeOut>
+        </EnvironmentComponentConfiguration>
+        <EnvironmentComponentConfiguration z:Id="94" i:type="SerialPortConfiguration">
+          <BaudRate>BR_115200</BaudRate>
+          <ComPortNumber>7</ComPortNumber>
+          <DataBits>DB_8</DataBits>
+          <DelayBetweenPackets>PT0.001S</DelayBetweenPackets>
+          <Handshake>NONE</Handshake>
+          <MaxFailureSnippetLengthInCharacters>0</MaxFailureSnippetLengthInCharacters>
+          <Parity>NO_PARITY</Parity>
+          <ResponseTimeout>PT10S</ResponseTimeout>
+          <SendPacketSize>2</SendPacketSize>
+          <StopBits>ONE</StopBits>
+          <InitializeAfterTargetPower>true</InitializeAfterTargetPower>
+        </EnvironmentComponentConfiguration>
+        <EnvironmentComponentConfiguration z:Id="95" i:type="SerialPortConfiguration">
+          <BaudRate>BR_115200</BaudRate>
+          <ComPortNumber>8</ComPortNumber>
+          <DataBits>DB_8</DataBits>
+          <DelayBetweenPackets>PT0.001S</DelayBetweenPackets>
+          <Handshake>NONE</Handshake>
+          <MaxFailureSnippetLengthInCharacters>0</MaxFailureSnippetLengthInCharacters>
+          <Parity>NO_PARITY</Parity>
+          <ResponseTimeout>PT10S</ResponseTimeout>
+          <SendPacketSize>2</SendPacketSize>
+          <StopBits>ONE</StopBits>
+          <InitializeAfterTargetPower>false</InitializeAfterTargetPower>
+        </EnvironmentComponentConfiguration>
+        <EnvironmentComponentConfiguration z:Id="96" i:type="PythonBasedTargetPowerControlConfiguration" />
+      </ComponentConfigurations>
+      <Name z:Id="97">PVC</Name>
+    </EnvironmentConfiguration>
+  </EnvironmentConfigurations>
+  <EnvironmentalConditionDescriptors z:Size="8">
+    <EnvironmentalConditionDescriptor z:Id="98" i:type="StringEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>true</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="1">
+        <InvalidationPolicy z:Id="99" i:type="PowerOffInvalidationPolicy" />
+      </InvalidationPolicies>
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="100">TilesToApply</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT5M</Timeout>
+      <EnvironmentalConditionCategory>HardwareSetting</EnvironmentalConditionCategory>
+      <DiscreteValues xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="3">
+        <d4p1:string z:Id="101">0</d4p1:string>
+        <d4p1:string z:Id="102">1</d4p1:string>
+        <d4p1:string z:Id="103">0,1</d4p1:string>
+      </DiscreteValues>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="104" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>true</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="105">VCCEU</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT20S</Timeout>
+      <EnvironmentalConditionCategory>General</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="106" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>0.9</Max>
+      <Min>0.5</Min>
+      <Step>0.005</Step>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="107" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>true</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="108">VCCBASE</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT1S</Timeout>
+      <EnvironmentalConditionCategory>General</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="109" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>1.1</Max>
+      <Min>0.5</Min>
+      <Step>0.005</Step>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="110" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>true</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="111">VCCINFAON</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT1S</Timeout>
+      <EnvironmentalConditionCategory>General</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="112" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>1.1</Max>
+      <Min>0.5</Min>
+      <Step>0.005</Step>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="113" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="1">
+        <d4p1:string z:Id="114">PowerOffStage</d4p1:string>
+      </AllowedStagesToSet>
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>false</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="115">media</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT1S</Timeout>
+      <EnvironmentalConditionCategory>Frequency</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="116" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>1800</Max>
+      <Min>300</Min>
+      <Step>50</Step>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="117" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="1">
+        <d4p1:string z:Ref="62" i:nil="true" />
+      </AllowedStagesToSet>
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>false</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="118">compute</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT1S</Timeout>
+      <EnvironmentalConditionCategory>Frequency</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="119" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>1400</Max>
+      <Min>300</Min>
+      <Step>50</Step>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="120" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="1">
+        <d4p1:string z:Id="121">PowerOffStage</d4p1:string>
+      </AllowedStagesToSet>
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>false</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="122">base</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT1S</Timeout>
+      <EnvironmentalConditionCategory>Frequency</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="123" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>1800</Max>
+      <Min>300</Min>
+      <Step>50</Step>
+    </EnvironmentalConditionDescriptor>
+    <EnvironmentalConditionDescriptor z:Id="124" i:type="DecimalRangeEnvironmentalConditionDescriptor">
+      <AllowedStagesToRead xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+      <AllowedStagesToSet xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="1">
+        <d4p1:string z:Ref="62" i:nil="true" />
+      </AllowedStagesToSet>
+      <CanReadAtAnyBootStage>true</CanReadAtAnyBootStage>
+      <CanSetAtAnyBootStage>false</CanSetAtAnyBootStage>
+      <ForceVerifyAfterEachTest>false</ForceVerifyAfterEachTest>
+      <ForceVerifyBeforeEachTest>false</ForceVerifyBeforeEachTest>
+      <InvalidationPolicies z:Size="0" />
+      <IsReadable>true</IsReadable>
+      <IsSettable>true</IsSettable>
+      <Name z:Id="125">systolic</Name>
+      <SetType>HardSet</SetType>
+      <SkipVerification>false</SkipVerification>
+      <Timeout>PT1S</Timeout>
+      <EnvironmentalConditionCategory>Frequency</EnvironmentalConditionCategory>
+      <ProfileStrategy z:Id="126" i:type="DoNotProfileStrategy" />
+      <ToleranceLowerDelta i:nil="true" />
+      <ToleranceUpperDelta i:nil="true" />
+      <Max>1450</Max>
+      <Min>300</Min>
+      <Step>50</Step>
+    </EnvironmentalConditionDescriptor>
+  </EnvironmentalConditionDescriptors>
+  <FuseBlocks z:Size="0" />
+  <FuseFragmentsToRedact xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Size="0" />
+  <FuseRevision i:nil="true" />
+  <FuseVisibilityMasks z:Size="0" />
+  <LineItemDataRevision i:nil="true" />
+  <Name z:Id="127">PVC</Name>
+  <NumberOfSockets>1</NumberOfSockets>
+  <ProductDefinitionSource z:Id="128">Product Definition Editor</ProductDefinitionSource>
+  <ProductEnablingScriptName i:nil="true" />
+  <SafeModeScriptName z:Id="129">SafeModePowerControl</SafeModeScriptName>
+  <Stepping i:nil="true" />
+  <SubDevices z:Size="36">
+    <SubDevice z:Id="130">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="131">T0_Base0</Description>
+      <Id z:Id="132">U1.U1</Id>
+      <ItuffProduct z:Id="133">DRS</ItuffProduct>
+      <Name z:Id="134">T0_Base0</Name>
+    </SubDevice>
+    <SubDevice z:Id="135">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="136">T0_CT6</Description>
+      <Id z:Id="137">U1.U10</Id>
+      <ItuffProduct z:Id="138">DRS</ItuffProduct>
+      <Name z:Id="139">T0_CT6</Name>
+    </SubDevice>
+    <SubDevice z:Id="140">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="141">T0_CT7</Description>
+      <Id z:Id="142">U1.U13</Id>
+      <ItuffProduct z:Id="143">DRS</ItuffProduct>
+      <Name z:Id="144">T0_CT7</Name>
+    </SubDevice>
+    <SubDevice z:Id="145">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="146">T0_CT1</Description>
+      <Id z:Id="147">U1.U17</Id>
+      <ItuffProduct z:Id="148">DRS</ItuffProduct>
+      <Name z:Id="149">T0_CT1</Name>
+    </SubDevice>
+    <SubDevice z:Id="150">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="151">T0_CT0</Description>
+      <Id z:Id="152">U1.U20</Id>
+      <ItuffProduct z:Id="153">DRS</ItuffProduct>
+      <Name z:Id="154">T0_CT0</Name>
+    </SubDevice>
+    <SubDevice z:Id="155">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="156">T0_CT4</Description>
+      <Id z:Id="157">U1.U11</Id>
+      <ItuffProduct z:Id="158">DRS</ItuffProduct>
+      <Name z:Id="159">T0_CT4</Name>
+    </SubDevice>
+    <SubDevice z:Id="160">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="161">T0_CT5</Description>
+      <Id z:Id="162">U1.U14</Id>
+      <ItuffProduct z:Id="163">DRS</ItuffProduct>
+      <Name z:Id="164">T0_CT5</Name>
+    </SubDevice>
+    <SubDevice z:Id="165">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="166">T0_CT3</Description>
+      <Id z:Id="167">U1.U16</Id>
+      <ItuffProduct z:Id="168">DRS</ItuffProduct>
+      <Name z:Id="169">T0_CT3</Name>
+    </SubDevice>
+    <SubDevice z:Id="170">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="171">T0_CT2</Description>
+      <Id z:Id="172">U1.U19</Id>
+      <ItuffProduct z:Id="173">DRS</ItuffProduct>
+      <Name z:Id="174">T0_CT2</Name>
+    </SubDevice>
+    <SubDevice z:Id="175">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="176">T0_R3</Description>
+      <Id z:Id="177">U1.U12</Id>
+      <ItuffProduct z:Id="178">DRS</ItuffProduct>
+      <Name z:Id="179">T0_R3</Name>
+    </SubDevice>
+    <SubDevice z:Id="180">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="181">T0_R2</Description>
+      <Id z:Id="182">U1.U15</Id>
+      <ItuffProduct z:Id="183">DRS</ItuffProduct>
+      <Name z:Id="184">T0_R2</Name>
+    </SubDevice>
+    <SubDevice z:Id="185">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="186">T0_R0</Description>
+      <Id z:Id="187">U1.U18</Id>
+      <ItuffProduct z:Id="188">DRS</ItuffProduct>
+      <Name z:Id="189">T0_R0</Name>
+    </SubDevice>
+    <SubDevice z:Id="190">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="191">T0_R1</Description>
+      <Id z:Id="192">U1.U21</Id>
+      <ItuffProduct z:Id="193">DRS</ItuffProduct>
+      <Name z:Id="194">T0_R1</Name>
+    </SubDevice>
+    <SubDevice z:Id="195">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="196">T0_ANR0</Description>
+      <Id z:Id="197">U3</Id>
+      <ItuffProduct z:Id="198">DRS</ItuffProduct>
+      <Name z:Id="199">T0_ANR0</Name>
+    </SubDevice>
+    <SubDevice z:Id="200">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="201">T1_Base1</Description>
+      <Id z:Id="202">U2.U1</Id>
+      <ItuffProduct z:Id="203">DRS</ItuffProduct>
+      <Name z:Id="204">T1_Base1</Name>
+    </SubDevice>
+    <SubDevice z:Id="205">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="206">T1_CT6</Description>
+      <Id z:Id="207">U2.U10</Id>
+      <ItuffProduct z:Id="208">DRS</ItuffProduct>
+      <Name z:Id="209">T1_CT6</Name>
+    </SubDevice>
+    <SubDevice z:Id="210">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="211">T1_CT7</Description>
+      <Id z:Id="212">U2.U13</Id>
+      <ItuffProduct z:Id="213">DRS</ItuffProduct>
+      <Name z:Id="214">T1_CT7</Name>
+    </SubDevice>
+    <SubDevice z:Id="215">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="216">T1_CT1</Description>
+      <Id z:Id="217">U2.U17</Id>
+      <ItuffProduct z:Id="218">DRS</ItuffProduct>
+      <Name z:Id="219">T1_CT1</Name>
+    </SubDevice>
+    <SubDevice z:Id="220">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="221">T1_CT0</Description>
+      <Id z:Id="222">U2.U20</Id>
+      <ItuffProduct z:Id="223">DRS</ItuffProduct>
+      <Name z:Id="224">T1_CT0</Name>
+    </SubDevice>
+    <SubDevice z:Id="225">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="226">T1_CT4</Description>
+      <Id z:Id="227">U2.U11</Id>
+      <ItuffProduct z:Id="228">DRS</ItuffProduct>
+      <Name z:Id="229">T1_CT4</Name>
+    </SubDevice>
+    <SubDevice z:Id="230">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="231">T1_CT0</Description>
+      <Id z:Id="232">U2.U14</Id>
+      <ItuffProduct z:Id="233">DRS</ItuffProduct>
+      <Name z:Id="234">T1_CT5</Name>
+    </SubDevice>
+    <SubDevice z:Id="235">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="236">T1_CT3</Description>
+      <Id z:Id="237">U2.U16</Id>
+      <ItuffProduct z:Id="238">DRS</ItuffProduct>
+      <Name z:Id="239">T1_CT3</Name>
+    </SubDevice>
+    <SubDevice z:Id="240">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="241">T1_CT2</Description>
+      <Id z:Id="242">U2.U19</Id>
+      <ItuffProduct z:Id="243">DRS</ItuffProduct>
+      <Name z:Id="244">T1_CT2</Name>
+    </SubDevice>
+    <SubDevice z:Id="245">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="246">T1_R3</Description>
+      <Id z:Id="247">U2.U12</Id>
+      <ItuffProduct z:Id="248">DRS</ItuffProduct>
+      <Name z:Id="249">T1_R3</Name>
+    </SubDevice>
+    <SubDevice z:Id="250">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="251">T1_R2</Description>
+      <Id z:Id="252">U2.U15</Id>
+      <ItuffProduct z:Id="253">DRS</ItuffProduct>
+      <Name z:Id="254">T1_R2</Name>
+    </SubDevice>
+    <SubDevice z:Id="255">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="256">T1_R0</Description>
+      <Id z:Id="257">U2.U18</Id>
+      <ItuffProduct z:Id="258">DRS</ItuffProduct>
+      <Name z:Id="259">T1_R0</Name>
+    </SubDevice>
+    <SubDevice z:Id="260">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="261">T1_R1</Description>
+      <Id z:Id="262">U2.U21</Id>
+      <ItuffProduct z:Id="263">DRS</ItuffProduct>
+      <Name z:Id="264">T1_R1</Name>
+    </SubDevice>
+    <SubDevice z:Id="265">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="266">T1_ANR1</Description>
+      <Id z:Id="267">U4</Id>
+      <ItuffProduct z:Id="268">DRS</ItuffProduct>
+      <Name z:Id="269">T1_ANR1</Name>
+    </SubDevice>
+    <SubDevice z:Id="270">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="271">T0_HBM3</Description>
+      <Id z:Id="272">U8</Id>
+      <ItuffProduct z:Id="273">DRS</ItuffProduct>
+      <Name z:Id="274">T0_HBM3</Name>
+    </SubDevice>
+    <SubDevice z:Id="275">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="276">T0_HBM2</Description>
+      <Id z:Id="277">U7</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="278">T0_HBM2</Name>
+    </SubDevice>
+    <SubDevice z:Id="279">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="280">T0_HBM1</Description>
+      <Id z:Id="281">U6</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="282">T0_HBM1</Name>
+    </SubDevice>
+    <SubDevice z:Id="283">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="284">T0_HBM0</Description>
+      <Id z:Id="285">U5</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="286">T0_HBM0</Name>
+    </SubDevice>
+    <SubDevice z:Id="287">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="288">T1_HBM4</Description>
+      <Id z:Id="289">U9</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="290">T1_HBM4</Name>
+    </SubDevice>
+    <SubDevice z:Id="291">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="292">T1_HBM5</Description>
+      <Id z:Id="293">U10</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="294">T1_HBM5</Name>
+    </SubDevice>
+    <SubDevice z:Id="295">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="296">T1_HBM5</Description>
+      <Id z:Id="297">U11</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="298">T1_HBM6</Name>
+    </SubDevice>
+    <SubDevice z:Id="299">
+      <Category>SUBDEVICE</Category>
+      <Description z:Id="300">T1_HBM7</Description>
+      <Id z:Id="301">U12</Id>
+      <ItuffProduct z:Ref="273" i:nil="true" />
+      <Name z:Id="302">T1_HBM7</Name>
+    </SubDevice>
+  </SubDevices>
+  <ISeedProducts z:Size="28">
+    <ISeedProduct z:Id="303">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="304">T0_Base0</Name>
+      <ProductName z:Id="305">PVC</ProductName>
+      <Stepping z:Id="306">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="307">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="308">T1_Base1</Name>
+      <ProductName z:Id="309">PVC</ProductName>
+      <Stepping z:Id="310">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="311">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="312">T0_CT6</Name>
+      <ProductName z:Id="313">T0_CT6</ProductName>
+      <Stepping z:Id="314">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="315">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="316">T0_CT7</Name>
+      <ProductName z:Id="317">T0_CT7</ProductName>
+      <Stepping z:Id="318">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="319">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="320">T0_CT1</Name>
+      <ProductName z:Id="321">T0_CT1</ProductName>
+      <Stepping z:Id="322">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="323">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="324">T0_CT0</Name>
+      <ProductName z:Id="325">T0_CT0</ProductName>
+      <Stepping z:Id="326">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="327">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="328">T0_CT4</Name>
+      <ProductName z:Id="329">T0_CT4</ProductName>
+      <Stepping z:Id="330">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="331">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="332">T0_CT5</Name>
+      <ProductName z:Id="333">T0_CT5</ProductName>
+      <Stepping z:Id="334">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="335">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="336">T0_CT3</Name>
+      <ProductName z:Id="337">T0_CT3</ProductName>
+      <Stepping z:Id="338">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="339">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="340">T0_CT2</Name>
+      <ProductName z:Id="341">T0_CT2</ProductName>
+      <Stepping z:Id="342">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="343">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="344">T1_CT6</Name>
+      <ProductName z:Id="345">T1_CT6</ProductName>
+      <Stepping z:Id="346">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="347">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="348">T1_CT7</Name>
+      <ProductName z:Id="349">T1_CT7</ProductName>
+      <Stepping z:Id="350">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="351">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="352">T1_CT1</Name>
+      <ProductName z:Id="353">T1_CT1</ProductName>
+      <Stepping z:Id="354">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="355">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="356">T1_CT0</Name>
+      <ProductName z:Id="357">T1_CT0</ProductName>
+      <Stepping z:Id="358">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="359">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="360">T1_CT4</Name>
+      <ProductName z:Id="361">T1_CT4</ProductName>
+      <Stepping z:Id="362">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="363">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="364">T1_CT5</Name>
+      <ProductName z:Id="365">T1_CT5</ProductName>
+      <Stepping z:Id="366">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="367">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="368">T1_CT3</Name>
+      <ProductName z:Id="369">T1_CT3</ProductName>
+      <Stepping z:Id="370">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="371">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="372">T1_CT2</Name>
+      <ProductName z:Id="373">T1_CT2</ProductName>
+      <Stepping z:Id="374">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="375">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="376">T0_ANR0</Name>
+      <ProductName z:Id="377">T0_ANR0</ProductName>
+      <Stepping z:Id="378">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="379">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="380">T1_ANR1</Name>
+      <ProductName z:Id="381">T1_ANR1</ProductName>
+      <Stepping z:Id="382">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="383">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="384">T0_R3</Name>
+      <ProductName z:Id="385">T0_R3</ProductName>
+      <Stepping z:Id="386">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="387">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="388">T0_R2</Name>
+      <ProductName z:Id="389">T0_R2</ProductName>
+      <Stepping z:Id="390">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="391">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="392">T0_R0</Name>
+      <ProductName z:Id="393">T0_R0</ProductName>
+      <Stepping z:Id="394">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="395">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="396">T0_R1</Name>
+      <ProductName z:Id="397">T0_R1</ProductName>
+      <Stepping z:Id="398">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="399">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="400">T1_R3</Name>
+      <ProductName z:Id="401">T1_R3</ProductName>
+      <Stepping z:Id="402">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="403">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="404">T1_R2</Name>
+      <ProductName z:Id="405">T1_R2</ProductName>
+      <Stepping z:Id="406">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="407">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="408">T1_R0</Name>
+      <ProductName z:Id="409">T1_R0</ProductName>
+      <Stepping z:Id="410">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+    <ISeedProduct z:Id="411">
+      <DefinitionVersion i:nil="true" />
+      <ISeedLocks z:Size="0" />
+      <Name z:Id="412">T1_R1</Name>
+      <ProductName z:Id="413">T1_R1</ProductName>
+      <Stepping z:Id="414">A-0</Stepping>
+      <UpdateUnitIdentifiers>true</UpdateUnitIdentifiers>
+    </ISeedProduct>
+  </ISeedProducts>
+  <Version>1</Version>
+</ProductDefinition>

@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SafetyEvents xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Failures>
+		<Event
+			Name="Thermal Switch On"
+			Id="0"
+			Description="thermal switch had been actuated, and thermal head overheat occurred (no coolant flow for example). InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Verify coolant valves are open, touch the in and out pipes and verify the are cold. if valves opened but out pipe is not cold, you might have coolant flow issue." />
+		<Event
+			Name="Leak Water Module"
+			Id="1"
+			Description="A leak was detected inside the Water Module. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT and close Main Valve and Chiller"
+			Action="Shutoff the DUT/platform, check the Manifold for condensation/leak. if leak handled, verify the leak sensor is dry before continue working with InTEC.">
+			<Cfg>
+				<Param
+					Name="LeakWaterModuleImpLimit"
+					type="100T"
+					Val="10.00"
+					Description="Value below this limit considered as Leak(inside the Water Module)" />
+				<Param
+					Name="LeakWaterModuleTimeTillEventOn"
+					type="1T"
+					Val="2"
+					Description="Leak for period longer than this value will trigger the Failure Event" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="Leak TH"
+			Id="2"
+			Description="A leak was detected in Thermal Head. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Power-off InTEC (from Mains), check the Thermal Head for freeze/condensation/leak. if leak handled, verify the leak sensor is dry before continue working with InTEC.">
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Low Coolant Pressure"
+			Id="3"
+			Description="The coolant pressure is 20% below wsp. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check if the coolant pressure is in desired value, if ok - verify WPS config param is configured properly.">
+			<Cfg>
+				<Param
+					Name="WPS"
+					type="10T"
+					Val="15"
+					Description="coolant pressure threshold" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Low Coolant Flow"
+			Id="4"
+			Description="The coolant pressure is 20% below gpm. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check if the coolant flow is in desired value, if ok - verify GPM config param is configured properly.">
+			<Cfg>
+				<Param
+					Name="GPM"
+					type="100T"
+					Val="0.25"
+					Description="coolant pressure threshold" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Low Purge Pressure"
+			Id="5"
+			Description="The purge pressure is 20% below ppt. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check if the purge pressure is in desired value, if ok - verify PPT config param is configured properly.">
+			<Cfg>
+				<Param
+					Name="PPT"
+					type="10T"
+					Val="1.0"
+					Description="purge pressure threshold" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Logic PS Failure"
+			Id="6"
+			Description="Logic 12v Power supply under-voltage was detected for accumulated 6sec during 1min period. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Verify InTEC 12V power supply is above 12V. If voltage is lower than 12V, use the power supply trimmer to increase the voltage." />
+		<Event
+			Name="DCDC Overheat"
+			Id="7"
+			Description="InTEC on-board DCDC temp is above limit. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Verify InTEC enclosure vents are not blocked. Check than InTEC enclosure fan is active when DC/DC temp is above 50C. Click on OUT OFF button, Turn off InTEC for it to cool down, after couple of minutes turn it back on, if error still appears replace HW U16 (ADT7461ARZ)." />
+		<Event
+			Name="H-Bridge Overheat"
+			Id="8"
+			Description="InTEC on-board H-Bridge temp is above limit. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Verify InTEC enclosure vents are not blocked. Check than InTEC enclosure fan is active when H-Bridge temp is above 50C. Click on OUT OFF button, Turn off InTEC for it to cool down, after couple of minutes turn it back on, if error still appears replace HW Q3 (MMBT3904LT1G)." />
+		<Event
+			Name="Output Current Overrun"
+			Id="9"
+			Description="Output current overrun (probably due to load short circuit). InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Run Diagnostics for the TH to check the TEC impedance, verify that there is no short circuit in the TEC path, verify that the TH current consumption is less than 30A. if TEC current is grater than 30A limit output voltage to TEC (Vmax) to consume less current." />
+		<Event
+			Name="Output Power Overrun"
+			Id="10"
+			Description="Output Power overrun. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Run Diagnostics for the TH to check the TEC impedance, verify that there is no short circuit in the TEC path, verify that the TH power consumption is less than 600W. if TEC power is grater than 600W limit output voltage to TEC (Vmax) to consume less power." />
+		<Event
+			Name="Tcase Feedback Overrun Error"
+			Id="11"
+			Description="The Tcase Feedback is at least OverrunErrMargin away from setpoint for 12sec and keeps running away for OverrunErrTime in OverrunErrSlope rate For 12+OverrunErrTime. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check Tcase connectivity (Wires/Connector at InTEC sida and TH side), if using DFF TH check if TH is press firmly (so case sensor will be in good contact with the TEC). Verify Tcase measurement is accurate using external device or by attaching another Case sensor near the original sensor. Check OverrunErr params cfg is propriate.">
+			<Cfg>
+				<Param
+					Name="OverrunErrMargin"
+					type="10T"
+					Val="7"
+					Description="Difference (±) around setpoint." />
+				<Param
+					Name="OverrunErrSlope"
+					type="10T"
+					Val="1"
+					Description="Max allowed Rate of temp change" />
+				<Param
+					Name="OverrunErrTime"
+					type="1T"
+					Val="9"
+					Description="Time limit for the violation of conditions till action" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="Tcase Feedback Setpoint Error"
+			Id="12"
+			Description="The Tcase Feedback temp is at least SpMargin away from setpoint for SpTime. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check SpMargin and SpTime params cfg is appropriate (Verify SpTime and SpMargin params match these of Feedback Setpoint Warning and CFG Fallback Setpoint Warning Events!). Verify TH performance enables reaching requested setpoint, check Tcase connectivity and accuracy. if issue not resulved, recover from the error and Run Diagnostics for TH TEC and Assembly.">
+			<Cfg>
+				<Param
+					Name="SpMargin"
+					type="10T"
+					Val="7"
+					Description="Difference (±) around setpoint." />
+				<Param
+					Name="SpTime"
+					type="1T"
+					Val="300"
+					Description="Time limit to enter into SpMargin" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="Max Temperature Error"
+			Id="13"
+			Description="Temp Feedback is greater than MaxT for MaxTime. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check MaxTime is enough for reaching SP margin in case of switching to fallback feedback. Check MaxT param cfg is appropriate your need. verify Tcase connectivity and accuracy.">
+			<Cfg>
+				<Param
+					Name="MaxT"
+					type="Intec Temp Format"
+					Val="120"
+					Description="Upper threshold for allowed temp." />
+				<Param
+					Name="MaxTime"
+					type="1T"
+					Val="3"
+					Description="Time limit to stay above MaxT before action is taken" />
+			</Cfg>
+		</Event>
+		<Event
+			Name="Min Temperature Error"
+			Id="14"
+			Description="Temp Feedback is less than MinT for MinTime. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Check MinTime is enough for reaching SP margin in case of switching to fallback feedback. Check MinT param cfg is appropriate your need. verify Tcase connectivity and accuracy.">
+			<Cfg>
+				<Param
+					Name="MinT"
+					type="Intec Temp Format"
+					Val="-45"
+					Description="Lower threshold for allowed temp." />
+				<Param
+					Name="MinTime"
+					type="1T"
+					Val="3"
+					Description="Time limit to stay above MinT before action is taken" />
+			</Cfg>
+		</Event>
+		<Event
+			Name="Leak Chiller"
+			Id="15"
+			Description="A leak was detected in the Chiller area. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT and close Main Valve and Chiller"
+			Action="Shutoff the DUT/platform, check the Chiller area for freeze/condensation/leak. if leak handled, verify the leak sensor is dry before continue working with InTEC.">
+			<Cfg>
+				<Param
+					Name="LeakChillerImpLimit"
+					type="100T"
+					Val="10.00"
+					Description="Value below this limit considered as Leak (in leak wire that goes to the chiller)" />
+				<Param
+					Name="LeakChillerTimeTillEventOn"
+					type="1T"
+					Val="2"
+					Description="Leak for period longer than this value will trigger the Failure Event" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Leak Floor"
+			Id="16"
+			Description="A leak was detected on the Floor area. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT and close Main Valve and Chiller"
+			Action="Shutoff the DUT/platform, check the Floor area for freeze/condensation/leak. if leak handled, verify the leak sensor is dry before continue working with InTEC.">
+			<Cfg>
+				<Param
+					Name="LeakFloorImpLimit"
+					type="100T"
+					Val="10.00"
+					Description="Value below this limit considered as Leak (in leak wire that goes to the floor)" />
+				<Param
+					Name="LeakFloorTimeTillEventOn"
+					type="1T"
+					Val="2"
+					Description="Leak for period longer than this value will trigger the Failure Event" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="TH Internal Condensation"
+			Id="17"
+			Description="Condensation was detected inside the Thermal Head. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Shutoff the DUT/platform, check the Thermal Head pedestal area for freeze/condensation. if leak handled, verify the leak sensor is dry before continue working with InTEC.">
+			<Cfg>
+				<Param
+					Name="CondensationLimit"
+					type="100T"
+					Val="1.69"
+					Description="Value below this limit considered as condensation (in Thermal Head)" />
+				<Param
+					Name="TimeTillEventOn"
+					type="1T"
+					Val="50"
+					Description="Condensation for period longer than this value will trigger the Failure Event" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="TH Internal Leak"
+			Id="18"
+			Description="Leak was detected inside the Thermal Head. InTEC Disabled output and closed coolant valves/activated TH fan, shutdown SUT"
+			Action="Shutoff the DUT/platform, check the Thermal Head pedestal area for leak. if leak handled, verify the leak sensor is dry before continue working with InTEC.">
+			<Cfg>
+				<Param
+					Name="ThInternalLeakLimit"
+					type="100T"
+					Val="0.15"
+					Description="Value below this limit considered as Leak (in Thermal Head)" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+	</Failures>
+	<Warnings>
+		<Event
+			Name="No Tcase "
+			Id="0"
+			Description="Tcase#0 is not connected or temp is out of range. InTEC Disabled output and open coolant valves/activated TH fan"
+			Action="Verify Tcase is connected and that the Tcase type fits you InTEC (Thermocouple/RTD)"
+			StopTesting="No" />
+		<Event
+			Name="Tcase cfg mismatch"
+			Id="1"
+			Description="TH HW cfg bits do not match TH EEPROM cfg (Check is active only if have EERPOM value). InTEC Disabled output and open coolant valves/activated TH fan"
+			Action="Connect a TH with Tcase type that is suitable for this InTEC, or change InTEC HW configuration to be the same as the TH Tcase type (GOTO\InTEC for instructions)"
+			StopTesting="No" />
+		<Event
+			Name="Thermal head not in socket"
+			Id="2"
+			Description="Thermal Tool Position sensor actuated (and no purge on thermal head) for 2seconds. InTEC Changed the setpoint to TtpSetpoint, when reached or after TtpTimeout - closed coolant valves/deactivated TH fan and disabled the output"
+			Action="If the thermal head is in the socket, verify that the Position sensor (TH Up sensor) is installed and connected properly. If not using a Position sensor, Disable this event (load Event XML with sensor check disabled, GOTO\InTEC for instructions). If TH EEPROM is not empty, verify TH EEPROM cfg fits the TH in regards to the Psotion sensor."
+			StopTesting="No">
+			<Cfg>
+				<Param
+					Name="TtpSetpoint"
+					type="1T"
+					Val="25"
+					Description="Setpoint to reach if head not in socket" />
+				<Param
+					Name="TtpTimeout"
+					type="1T"
+					Val="25"
+					Description="Time limit to reach setpoint" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Selftest cables connected"
+			Id="3"
+			Description="Selftest cables are connected (w/ Resistor instead the TEC), InTEC disabled output and closed coolant valves/deactivated TH fan"
+			Action="Disconnect selftest cables if not running bench selftest."
+			StopTesting="No" />
+		<Event
+			Name="Requested feedback NA"
+			Id="4"
+			Description="No valid control sensor for the selected feedback type. InTEC uses the Configurable Fallback as feedback"
+			Action="Verify that the requested feedback source is connected, check InTEC configuration and check DUT and platform fit the cfg and powered if needed. Run Diagnostics TDAU/PECI tests for more info."
+			StopTesting="No" />
+		<Event
+			Name="Delta between Tcase and Tfeedback too high"
+			Id="5"
+			Description="Difference between Tcase and Tfeedback is higher than DeltaTemp for DeltaTempTime. InTEC uses Tcase as feedback. InTEC will Automatically recovered back to requested feedback type when Delta back within limits."
+			Action="Verify that there is a good thermal contact between the TH and the unit. Verify that the TH is on the corrent platform/socket and that its spec fits the unit temp requirements. consider changing this event params cfg (DelatTemp/DeltaTempTime) to fit your scenario."
+			StopTesting="No">
+			<Cfg>
+				<Param
+					Name="DeltaTemp"
+					type="10T"
+					Val="30"
+					Description="Max allowed difference between Feedback and Tcase" />
+				<Param
+					Name="DeltaTempTime"
+					type="1T"
+					Val="2"
+					Description="Time limit to reach setpoint" />
+			</Cfg>
+		</Event>
+		<Event
+			Name="Feedback Temp Overrun Warning"
+			Id="6"
+			Description="Feedback temp is at least OverrunWarnMargin away from setpoint for 12sec and keeps running away for OverrunWarnTime in OverrunWarnSlope rate For 12+OverrunWarnTime. InTEC uses the Configurable Fallback as feedback."
+			Action="Verify that there is a good thermal contact between the TH and the unit. Verify water temp fits the TH requirement and that TH spec fits the unit temp requirements. consider changing this event params cfg to fit your scenario. Run Diagnostics TH TEC and Assembly tests for more info."
+			StopTesting="No">
+			<Cfg>
+				<Param
+					Name="OverrunWarnMargin"
+					type="10T"
+					Val="5"
+					Description="Difference (±) around setpoint." />
+				<Param
+					Name="OverrunWarnSlope"
+					type="10T"
+					Val="1"
+					Description="Time limit to reach setpoint" />
+				<Param
+					Name="OverrunWarnTime"
+					type="1T"
+					Val="15"
+					Description="Max allowed difference between Feedback and Tcase" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="Feedback Setpoint Warning"
+			Id="7"
+			Description="Feedback temp (other than the default feedback) is at least SpMargin away from setpoint for SpTime. InTEC uses the Configurable Fallback as feedback."
+			Action="Verify that there is a good thermal contact between the TH and the unit. Verify water temp fits the TH requirement and that TH spec fits the unit temp requirements. consider changing this event params cfg to fit your scenario (Verify SpTime and SpMargin params match these of Tcase Feedback Setpoint Error and CFG Fallback Setpoint Warning Events!). Run Diagnostics TH TEC and Assembly tests for more info."
+			StopTesting="No">
+			<Cfg>
+				<Param
+					Name="SpMargin"
+					type="10T"
+					Val="7"
+					Description="Difference (±) around setpoint." />
+				<Param
+					Name="SpTime"
+					type="1T"
+					Val="300"
+					Description="Time limit to reach setpoint" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="Logic PS undervoltage"
+			Id="8"
+			Description="Logic 12v power supply is under-voltage. InTEC disabled output and opened coolant valves/activated TH fan"
+			Action="Check if TIC cable is not connected properlt (TIC connector accidently connected to InTEC)."
+			StopTesting="No" />
+		<Event
+			Name="Low TEC PS voltage"
+			Id="9"
+			Description="Measured TEC PS voltage level is under the TH EEPROM cfg or under 4V."
+			Action="Verify the TEC PS is connected propely to InTEC Power cable (PS outputs and control), check the PS voltage suitable for this TH."
+			StopTesting="No">
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Output Off Button act (Pressed)"
+			Id="10"
+			Description="External Output button is pressed. InTEC disabled output and opened coolant valves/activated TH fan."
+			Action="Click the output button so it will be relased (output to TEC be enabled)"
+			StopTesting="No" />
+		<Event
+			Name="Thermal Head Not connected"
+			Id="11"
+			Description="Thermal head is not connected (no TH EEPROM and no Thermal Switch/Bypass found)"
+			Action="Connect a Thermal Head to InTEC Enclosure J6. "
+			StopTesting="No">
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="24V ECN required"
+			Id="12"
+			Description="Using 24V power supply with InTEC that didn't passed 24V ECN (ECN#3), Output power to TEC is limited to 12V."
+			Action="For using 24V, do ECN#3 (GOTO/intec for procedure)"
+			StopTesting="No" />
+		<Event
+			Name="CFG Fallback Temp Overrun Warning"
+			Id="13"
+			Description="Cfg Fallback temp is at least OverrunWarnMargin away from setpoint for 12sec and keeps running away for OverrunWarnTime in OverrunWarnSlope rate For OverrunWarnTime. InTEC uses the Default fallback as feedback."
+			Action="Verify that there is a good thermal contact between the TH and the unit. Verify water temp fits the TH requirement and that TH spec fits the unit temp requirements. consider changing this event params cfg to fit your scenario. Run Diagnostics TH TEC and Assembly tests for more info."
+			StopTesting="No">
+			<Cfg>
+				<Param
+					Name="OverrunWarnMargin"
+					type="10T"
+					Val="5"
+					Description="Difference (±) around setpoint." />
+				<Param
+					Name="OverrunWarnSlope"
+					type="10T"
+					Val="1"
+					Description="Time limit to reach setpoint" />
+				<Param
+					Name="OverrunWarnTime"
+					type="1T"
+					Val="15"
+					Description="Max allowed difference between Feedback and Tcase" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="CFG Fallback Setpoint Warning"
+			Id="14"
+			Description="Cfg Fallback temp is at least SpMargin away from setpoint for SpTime. InTEC uses the Default Fallback as feedback."
+			Action="Verify that there is a good thermal contact between the TH and the unit. Verify water temp fits the TH requirement and that TH spec fits the unit temp requirements. consider changing this event params cfg to fit your scenario (Verify SpTime and SpMargin params match these of Tcase Feedback Setpoint Error and Feedback Setpoint Warning Events!). Run Diagnostics TH TEC and Assembly tests for more info."
+			StopTesting="No">
+			<Cfg>
+				<Param
+					Name="SpMargin"
+					type="10T"
+					Val="7"
+					Description="Difference (±) around setpoint." />
+				<Param
+					Name="SpTime"
+					type="1T"
+					Val="300"
+					Description="Time limit to reach setpoint" />
+			</Cfg>
+			<IsDisable
+				Disable="No" />
+		</Event>
+		<Event
+			Name="HW Error"
+			Id="15"
+			Description="InTEC has HW Error, see details in HW Errors screen"
+			Action="None"
+			StopTesting="No" />
+		<Event
+			Name="PRBS Mode"
+			Id="16"
+			Description="InTEC is working in PRBS mode, output is toggled between 2 values"
+			Action="Change operating mode from Host InterFace"
+			StopTesting="No" />
+		<Event
+			Name="OpenLoop Mode"
+			Id="17"
+			Description="InTEC is working in Open Loop mode"
+			Action="Change operating mode from Host InterFace"
+			StopTesting="No" />
+		<Event
+			Name="Maintain Output Mode"
+			Id="18"
+			Description="InTEC maintains last output it had before entering this mode"
+			Action="Change operating mode from Host InterFace"
+			StopTesting="No" />
+		<Event
+			Name="Condensation / Leak board Not Detected"
+			Id="19"
+			Description="Condensation / Leak board Not Detected and TH condensation and/or internal leak check is enabled"
+			Action="Change operating mode from Host InterFace"
+			StopTesting="No" />
+	</Warnings>
+	<Notifications>
+		<Event
+			Name="Comm Output off"
+			Id="0"
+			Description="Output disabled through communication. InTEC disabled output and opened coolant valves/activated TH fan."
+			Action="Send enable command form GUI (or automation SW) to turn on the output" />
+		<Event
+			Name="High TEC PS voltage"
+			Id="2"
+			Description="Measured TEC PS voltage level is over the TH EEPROM cfg (Check is active only if have EERPOM value). TEC output voltage is limited by DCDC to TH EEPROM level"
+			Action="Change the TEC PS voltage according TH cfg or change the TEC voltage parameter in the TH EEPROM " />
+		<Event
+			Name="No unit in socket"
+			Id="4"
+			Description="No unit in socket detected"
+			Action="TBD">
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="TH EEPROM Not Detected"
+			Id="5"
+			Description="No communication with TH EEPROM. Events related to TH EEPROM are ignored."
+			Action="Verify TH EEPROM is installed and its green LED is on, check the connectivity of the TH EEPROM to InTEC J6. If connectivity is OK but the notification still appear replace the TH EEPROM.">
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="TH EEPROM Is Empty"
+			Id="6"
+			Description="Have communication with TH EEPROM, but it has no data. This issue won't affect thermal performance. only auto cfg from TH is unavailable and Events related to TH EEPROM are ignored."
+			Action="If needed download suitable data to TH EEPROM.">
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Output overcurrent restrained"
+			Id="7"
+			Description="Output overcurrent detected and restrained(Indication is on only during the overcurrent situation), InTEC reduces output voltage."
+			Action="-" />
+		<Event
+			Name="Output overpower restrained"
+			Id="8"
+			Description="Output overpower detected and restrained (InTEC reduces output voltage)"
+			Action="-" />
+		<Event
+			Name="Purge Off"
+			Id="9"
+			Description="Purge is off since Tcase is greater than PurgeOffTemp. InTEC closed purge valves."
+			Action="if purge is off too early (see condensation on TH) change the PutgeOffTemp param in the Events cfg file.">
+			<Cfg>
+				<Param
+					Name="PurgeOffTemp"
+					type="1T"
+					Val="15"
+					Description="Temp limit to close purge if feedback temp exceed" />
+			</Cfg>
+			<IsDisable
+				Disable="Yes" />
+		</Event>
+		<Event
+			Name="Disarmed "
+			Id="10"
+			Description="InTEC-D is in Disarm mode (according user's cmd). InTEC disabled output and stopped the buzzer. "
+			Action="Use Ack button (4 sec press) or reArm command from host to return to normal operation mode." />
+		<Event
+			Name="InTECD - Gang mode"
+			Id="11"
+			Description="InTEC-D is in Gang mode. InTEC-D output follows InTEC-D0 output."
+			Action="Toggle gang mode form Host Interface." />
+		<Event
+			Name="TH Internal Humidity Sense"
+			Id="12"
+			Description="The Voltage of the Condensation/Leak board sensor inside the Thermal Head is lower then CondensationLimit (if stays like that for user defined time the Failure event will be set)"
+			Action="If this is a false alarm, user should change CondensationLimit" />
+		<Event
+			Name="Variable Setpoint Enabled"
+			Id="13"
+			Description="Variable Setpoint is enabled, therefore the actual setpoint might have an offset according user cfg."
+			Action="If Variable Setpoint is not desired, disable it from communication (Automation SW)" />
+	</Notifications>
+	<HardWare_Errors>
+		<IntecH>
+			<Error
+				Name="InTECD0Err"
+				Id="0"
+				Description="InTEC-D0"
+				Action="None" />
+			<Error
+				Name="InTECD1Err"
+				Id="1"
+				Description="InTEC-D1"
+				Action="None" />
+			<Error
+				Name="InTECD2Err"
+				Id="2"
+				Description="InTEC-D2"
+				Action="None" />
+			<Error
+				Name="InTECD3Err"
+				Id="3"
+				Description="InTEC-D3"
+				Action="None" />
+			<Error
+				Name="PECIModuleErr"
+				Id="4"
+				Description="PECI Module (Power cycle InTEC or reprogram PECI Module)"
+				Action="None" />
+			<Error
+				Name="IOExpErr"
+				Id="5"
+				Description="I/O Expansion (U48)"
+				Action="None" />
+			<Error
+				Name="ADCErr"
+				Id="6"
+				Description="ADC (U38)"
+				Action="None" />
+			<Error
+				Name="EEPROMErr"
+				Id="7"
+				Description="EEPROM (U15)"
+				Action="None" />
+			<Error
+				Name="FLASHErr"
+				Id="8"
+				Description="FLASH (U14)"
+				Action="None" />
+			<Error
+				Name="I2CMasterErr"
+				Id="9"
+				Description="I2C Master (Power Cycle InTEC, Check R134 and R135 assembled, disconnect VFT UI and restart InTEC, if still have issue replace U48)"
+				Action="None" />
+			<Error
+				Name="SPIMasterErr"
+				Id="10"
+				Description="SPI Master (Check R26 and R46 assembled, if so replace U11)"
+				Action="None" />
+			<Error
+				Name="CurrSrcErr"
+				Id="11"
+				Description="Current Source (U30)"
+				Action="None" />
+			<Error
+				Name="FastcalErr"
+				Id="12"
+				Description="Fastcal (Q19)"
+				Action="None" />
+			<Error
+				Name="LCDErr"
+				Id="13"
+				Description="LCD (Check VFT UI cable Connected, Check UI select button is in the right position with yellow LED on, restart InTEC or replace VFT UI)"
+				Action="None" />
+			<Error
+				Name="TDAUErr"
+				Id="14"
+				Description="TDAU (Replace TDAU or Q19)"
+				Action="None" />
+			<Error
+				Name="EthernetPhyErr"
+				Id="15"
+				Description="Ethernet Phy"
+				Action="None" />
+			<Error
+				Name="I2CSlaveErr"
+				Id="16"
+				Description="I2C Slave"
+				Action="None" />
+			<Error
+				Name="USBErr"
+				Id="17"
+				Description="USB"
+				Action="None" />
+			<Error
+				Name="EthernetErr"
+				Id="18"
+				Description="Ethernet"
+				Action="None" />
+			<Error
+				Name="SPISlaveErr"
+				Id="19"
+				Description="SPI Slave"
+				Action="None" />
+			<Error
+				Name="UARTErr"
+				Id="20"
+				Description="UART"
+				Action="None" />
+			<Error
+				Name="FeedbackWarn"
+				Id="24"
+				Description="Feedback Warning"
+				Action="None" />
+			<Error
+				Name="FeedbackFailure"
+				Id="25"
+				Description="Feedback Failure"
+				Action="None" />
+		</IntecH>
+		<IntecD>
+			<Error
+				Name="McuErr"
+				Id="0"
+				Description="MCU"
+				Action="None" />
+			<Error
+				Name="IOExpError"
+				Id="1"
+				Description="I/O Expansion (U40)"
+				Action="None" />
+			<Error
+				Name="CurrentSourceError"
+				Id="2"
+				Description="Current Source (U6)"
+				Action="None" />
+			<Error
+				Name="EEpromError"
+				Id="3"
+				Description="EEPROM (U43)"
+				Action="None" />
+			<Error
+				Name="OnBoardTempSenseError"
+				Id="4"
+				Description="OnBoard Temp Sense (U19/Q3)"
+				Action="None" />
+			<Error
+				Name="McuInBootMode"
+				Id="8"
+				Description="MCU In Boot Mode (Power InTEC off and then back on, or reprogram InTEC-D FW)"
+				Action="None" />
+			<Error
+				Name="McuNotInReqMode"
+				Id="9"
+				Description="MCU Not In Req Mode"
+				Action="None" />
+		</IntecD>
+	</HardWare_Errors>
+</SafetyEvents>

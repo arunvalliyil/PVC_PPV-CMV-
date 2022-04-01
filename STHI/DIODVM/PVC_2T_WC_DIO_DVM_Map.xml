@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File creation info
+     DIO/DVM Map Version: 0.952
+     DIO/DVM Map Date: 20201118
+     Supported Motherboards: PVC_2T
+     Generated from Excel file: \\amr\ec\proj\sttd\XPV_Projects\Server\Pontevecchio (PVC)\DIO-DVM Map\PVC_2T-WC-SQIB_BOB-DIO_DVM_Map_0p952.xlsm
+     Generated from DIO_DVM_MAP Template version: 1.02
+     Generated on 11/18/2020 12:03:33 PM
+     Excel version = Office 2016
+     Created by = rsetyawa
+     Map Revisions
+          Rev 0.1 : First draft DIO/DVM map for PVC-2T
+          Rev 0.2 : DIO assignment updates for DR0.3
+          Rev 0.3 : Updates as of DR0.6
+          Rev 0.9 : PPV header re-map to accmodate SPEED_CONFIG, other fixes, ready for DR0.9
+          Rev 0.91 : Check connection with schematic PVC2T_RVP_PPO_FAB1_SCH_REV0p92_WW31p4.pdf. Change DIO41, DIO42 to Input from output. Set DIO39 to output.
+          Rev 0.92 : Fixing limit on DVM channel 2 and 3 to 5.5V and 3.0V
+          Rev 0.95 : Copy to new DIO/DVM template from PVC DIO/DVM map ver 0.92
+          Rev 0.951 : Change DIO40 from output to input
+          Rev 0.952 : Change DIO34 and DIO37 Initial State from Hi-Z to Low (coping error from ver 0.92)
+-->
+<DDMap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsFASEMap>true</IsFASEMap>
+  <MapVersion>0.952</MapVersion>
+  <MapHWType>STDIO</MapHWType>
+  <IsMultiDut>false</IsMultiDut>
+  <TIUCount>1</TIUCount>
+  <Entries>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>FP_NMI_BTN_N-WC</Name>
+      <Channel>10</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>J8K1.14 - Wilson City to J1D2.5 - SQIB - has 10K pull up to P3V3_AUX - Used LOW -&gt; HI-Z</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>FP_ID_BTN_N-WC</Name>
+      <Channel>11</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>J8K1.16 - Wilson City to J1D1.6 - SQIB - has 10K pull up to P3V3_AUX - Use LOW -&gt; HI-Z</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>FP_RST_BTN_N-WC</Name>
+      <Channel>12</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>J8K1.20 - Wilson City to J1D2.7 - SQIB</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>FP_BMC_PWR_BTN_N-WC</Name>
+      <Channel>13</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>J8K1.24 - Wilson City to J1D2.8 - SQIB</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_GPU0_MEMHOT_N</Name>
+      <Channel>16</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_GPU01_PMAX_EVENT_N</Name>
+      <Channel>17</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>H_CD01_SPEED_CONFIG_STRAP_R</Name>
+      <Channel>34</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>LOW</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>1.8</VrefVoltage>
+      <Description>Low = 56G, High = 90G</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_AMC_BOOTLOADER_EN_N</Name>
+      <Channel>36</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_GPU01_LVC3_CXL_MODE</Name>
+      <Channel>37</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>LOW</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>Low = PCIE Bus, High = CXL Bus, but resistor stuffing look like not correct R9G3 and R9B2</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_LVC3_GPU0_RESETOUT_R_N</Name>
+      <Channel>38</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_MFG_MODE_N</Name>
+      <Channel>39</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_RST_GPU01_PERST_N</Name>
+      <Channel>40</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_GPU01_PUNIT_CATERR_R_N</Name>
+      <Channel>41</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_AMC_FBRK_N</Name>
+      <Channel>42</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>EV_GPU01_THERMTRIP_R_N</Name>
+      <Channel>43</Channel>
+      <Mode>INPUT</Mode>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>NONE</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>THERMTRIP_A_CLR</Name>
+      <Channel>48</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>Only to SQIB to clear Thermtrip latch</Description>
+    </DDEntry>
+    <DDEntry xsi:type="DIOEntry">
+      <Name>THERMTRIP_B_CLR</Name>
+      <Channel>49</Channel>
+      <Mode>OUTPUT</Mode>
+      <InitialValue>HIGHZ</InitialValue>
+      <Hidden>false</Hidden>
+      <VrefVoltage>3.3</VrefVoltage>
+      <Description>Only to SQIB to clear Thermtrip latch</Description>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>P3V3_AUX_PPV</Name>
+      <Channel>0</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>3.63</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P12V_SYS</Name>
+      <Channel>1</Channel>
+      <Gain>2</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>13.2</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>true</DeactuateCheck>
+      <ThresholdLimit>0.5</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P5V</Name>
+      <Channel>2</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>5.5</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>true</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_PVPP</Name>
+      <Channel>3</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>3</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P1V8_VCCFA_EHV</Name>
+      <Channel>4</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1.98</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P1V8_VCCFA_EHV_FIVRA</Name>
+      <Channel>5</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1.98</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V75_VCCANR_VDD_CD0</Name>
+      <Channel>6</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>0.9</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V75_VCCANR_VDD_CD1</Name>
+      <Channel>7</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>0.9</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V75_VCCANR_IO_CD0</Name>
+      <Channel>9</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>0.9</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V75_VCCANR_IO_CD1</Name>
+      <Channel>10</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>0.9</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V85_VCCANR_DIG_CD0</Name>
+      <Channel>11</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V85_VCCANR_DIG_CD1</Name>
+      <Channel>12</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_PVCCINFAON</Name>
+      <Channel>13</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1.1</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_PVCCFUSE</Name>
+      <Channel>14</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1.6</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V85_VCCANR_MDFI_CD0</Name>
+      <Channel>18</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_P0V85_VCCANR_MDFI_CD1</Name>
+      <Channel>19</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>1</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_PVCCIN0</Name>
+      <Channel>20</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>2</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>EV_PVCCIN1</Name>
+      <Channel>21</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>2</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>P3V3_WC</Name>
+      <Channel>22</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>3.63</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description>J8K1.22 - Wilson City</Description>
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>P5V_AUX_WC</Name>
+      <Channel>23</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>5.5</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description>J8K1.21 - Wilson City</Description>
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>P5V_WC</Name>
+      <Channel>24</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>5.5</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description>J8K1.37 - Wilson City</Description>
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="SingleDVMEntry">
+      <Name>P3V3_AUX_WC</Name>
+      <Channel>25</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>3.63</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description>J8K1.32 - Wilson City</Description>
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+    <DDEntry xsi:type="DiffDVMEntry">
+      <Name>EV_VSENSE_PVCCIN_CPU0_SKT_VSEN</Name>
+      <Channel>7</Channel>
+      <Gain>1</Gain>
+      <LowerLimit>-0.2</LowerLimit>
+      <UpperLimit>2</UpperLimit>
+      <Hidden>false</Hidden>
+      <Description />
+      <DeactuateCheck>false</DeactuateCheck>
+      <ThresholdLimit>0.3</ThresholdLimit>
+      <HotSocketCheck>false</HotSocketCheck>
+      <HotSocketThresholdLimit>0.3</HotSocketThresholdLimit>
+    </DDEntry>
+  </Entries>
+</DDMap>

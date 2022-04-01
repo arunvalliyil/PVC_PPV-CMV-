@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCECheckBase xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.Common.BaseClasses">
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.HostImageCECheck">
+		<Enabled>false</Enabled>
+		<Expected>2012.v16</Expected>
+		<Name>Host Image</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.CiscoSG300CECheck">
+		<Enabled>false</Enabled>
+		<Expected>1.3.7.18</Expected>
+		<Name>CiscoSG300 SW Version</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.APSEVersionCheck">
+		<Enabled>false</Enabled>
+		<Expected>8.27.4.7</Expected>
+		<Name>APSE Version</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.WindowsGenuineCheck">
+		<Enabled>false</Enabled>
+		<Expected>Genuine</Expected>
+		<Name>Windows Genuine</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.QCS, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.QCS.QCSConfigChecksum">
+		<Enabled>false</Enabled>
+		<Expected>Valid</Expected>
+		<Name>QCS Config Checksum</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.QCS, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.QCS.RFCConfigChecksum">
+		<Enabled>false</Enabled>
+		<Expected>Valid</Expected>
+		<Name>RFC Config Checksum</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.QCS, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.QCS.QCSDatabaseSchema">
+		<Enabled>false</Enabled>
+		<Expected>Valid</Expected>
+		<Name>QCS Database Schema Version</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.LANSpeedCheck">
+		<Enabled>false</Enabled>
+		<Expected>1000000000</Expected>
+		<Name>LAN Speed</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.CC, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.CC.BaseImageCECheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>CC Base Image</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.CC, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.CC.CCSSDInfoCheck">
+		<Enabled>false</Enabled>
+		<Expected>intel ssdmceac180b3,LLLi|Intel SSDMCEAW240A4,DC33|INTEL SSDSCKJF180A5,TG16</Expected>
+		<Name>CC SSD</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.EditableFWCECheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>CC PDE Version</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">3</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.ICCDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.EditableFWCECheck">
+		<Enabled>false</Enabled>
+		<Expected>8.26.2.4</Expected>
+		<Name>APSEDeviceRuntime</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">0</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.ICCDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.EditableFWCECheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>NUC-BIOS</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">1</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.ICCDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.EditableFWCECheck">
+		<Enabled>false</Enabled>
+		<Expected>FASTCC11.R00.G011.B00.1803052050</Expected>
+		<Name>FASTCC-BIOS</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">2</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.ICCDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.NIDAQ, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.NIDAQ.NidaqModelCheck">
+		<Enabled>false</Enabled>
+		<Expected>USB-6210</Expected>
+		<Name>NIDAQ Model</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.EditableFWCECheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>ITP</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">0</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IITP2Dvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.ITP2, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.ITP2.ITPDriverCheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>ITP_Driver</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">1</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IITP2Dvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.BiosEmulator, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.BiosEmulator.SpiVoltageCheck">
+		<Enabled>false</Enabled>
+		<Expected>3.3</Expected>
+		<Name>BIOS Emulator SPI Voltage</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.BiosEmulator, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.BiosEmulator.SpiPullupCheck">
+		<Enabled>false</Enabled>
+		<Expected>No Pull-Ups</Expected>
+		<Name>BIOS Emulator SPI Pullups</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>2.6</Expected>
+		<Name>LCBE</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">0</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IBiosEmulatorDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>7.2</Expected>
+		<Name>LCBEFPGA</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">1</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IBiosEmulatorDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>0.84</Expected>
+		<Name>EM100</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">2</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IBiosEmulatorDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.APM, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.APM.ActuationForceCheck">
+		<Enabled>false</Enabled>
+		<Expected>60</Expected>
+		<Name>TCU PRESS Force</Name>
+		<Type xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.Device.Driver.APM">PRESS</Type>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.APM, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.APM.ActuationForceCheck">
+		<Enabled>false</Enabled>
+		<Expected>0</Expected>
+		<Name>TCU DIE Force</Name>
+		<Type xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.Device.Driver.APM">DIE</Type>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.APM, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.APM.ActuationForceCheck">
+		<Enabled>false</Enabled>
+		<Expected>0</Expected>
+		<Name>TCU PURGE Force</Name>
+		<Type xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.Device.Driver.APM">PURGE</Type>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.APM, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.APM.ActuationForceCheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>TCU LTIM_PERIPHERAL_VACUUM Force</Name>
+		<Type xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.Device.Driver.APM">LTIM_PERIPHERAL_VACUUM</Type>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.TCUModelCheck">
+		<Enabled>false</Enabled>
+		<Expected>ESSAI,51850047501A|ESSAI,59950526301A|ESSAI,59950350201B|ESSAI,59950190101C</Expected>
+		<Name>TCU Model</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>3.16</Expected>
+		<Name>APM</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">0</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IAPMDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>3.19</Expected>
+		<Name>STDIO</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">0</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.ISTDIODvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>4.08</Expected>
+		<Name>STDIOFPGA</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">1</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.ISTDIODvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.IntecFwInfoCheck">
+		<Enabled>false</Enabled>
+		<Expected>Intec 1C|Intec 1D</Expected>
+		<Name>Intec</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.SATA, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.SATA.SSDOsImageCECheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>SSD Drive0 OS Image Version</Name>
+		<DriveType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.Device.Driver.SATA">Drive0</DriveType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.STHI.Device.Driver.SATA, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.SATA.SSDOsImageCECheck">
+		<Enabled>false</Enabled>
+		<Expected></Expected>
+		<Name>SSD Drive1 OS Image Version</Name>
+		<DriveType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.Device.Driver.SATA">Drive1</DriveType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>1.13</Expected>
+		<Name>Chimera</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">0</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IChimeraDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="ApseCore, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.ApseCore.CommonHelperClasses.FirmwareCECheck">
+		<Enabled>false</Enabled>
+		<Expected>3.2</Expected>
+		<Name>ChimeraFPGA</Name>
+		<FirmwareID xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">1</FirmwareID>
+		<fwReaderType xmlns="http://schemas.datacontract.org/2004/07/Intel.STHI.ApseCore.CommonHelperClasses">Intel.STHI.ApseCore.Common.Interfaces.IChimeraDvr, ApseCore.Common, Version=8.26.2.4, Culture=neutral, PublicKeyToken=null</fwReaderType>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.Mpv.Fusion.ApseFusionDriver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.CellAgentServiceCECheck">
+		<Enabled>false</Enabled>
+		<Expected>1.0.0.0</Expected>
+		<Name>Fusion Cell Agent</Name>
+	</CECheckBase>
+	<CECheckBase xmlns:d2p1="Intel.Mpv.Fusion.ApseFusionDriver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+		i:type="d2p1:Intel.STHI.Device.Driver.ModuleAgentCECheck">
+		<Enabled>false</Enabled>
+		<Expected>1.0.0.0</Expected>
+		<Name>Fusion Module Agent</Name>
+	</CECheckBase>
+</ArrayOfCECheckBase>
